@@ -1,0 +1,35 @@
+[build-system]
+requires = ["fastapi"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastapi_path_model_resolver"
+version = "0.0.1"
+authors = [
+  { name="Daniel Rangel", email="daniel.rangel.sa@gmail.com" },
+]
+description = "Resolve paths in a model way"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.dependencies]
+fastapi = "^0.95.0"
+
+[project.optional-dependencies]
+sqlalchemy = ["sqlalchemy"]
+tortoise-orm = ["tortoise-orm"]
+gino = ["gino"]
+peewee = ["peewee"]
+all = ["sqlalchemy", "tortoise-orm", "gino", "peewee"]
+
+[project.urls]
+Homepage = "https://github.com/pypa/pathmodelresolver"
+Issues = "https://github.com/pypa/pathmodelresolver/issues"
+
+[tool.setuptools]
+packages = ["src"]
